@@ -6,7 +6,7 @@
     <h4>{{ mag }}</h4>
     <!-- v-bind:publicpath="publicPath"可以简写成 :publicpath="publicPath"-->
     <HelloWorld v-bind:publicpath="publicPath"/>
-    <li v-for="todo in todos" :key="todo.tex">
+    <li v-for="todo in todos" :key="todo.tex" :style="[{color:(seen==true?'#CE0808':'#e2bcbc')},{fontSize:'20px'}]">
       {{ todo.tex }}
     </li>
     <p>{{ reverseDataMessage }}</p>
@@ -30,6 +30,7 @@ export default {
   },
   data() {
     return {
+      conFontColor:"",
       inputMessage:"",
       seen: true,
       mag: "我是Data里面传递数据",
