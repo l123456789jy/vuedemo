@@ -56,11 +56,25 @@ export default {
     }
   },
 
-
+  computed:{
+    session_id(){
+      return this.$store.state.logIn.session_id;
+    },
+  },
 
   created() {
+//1
+    this.$store.commit('setAuthor', 'author2');
+//2
+    this.$store.commit('logIn/setSessionId', '22222');
+  },
 
-  }
+  mounted() {
+    //1
+    console.log(this.session_id);
+    //2
+    console.log(this.$store.state.author);
+  },
 
 }
 
