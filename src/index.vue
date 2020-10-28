@@ -14,6 +14,8 @@
     <input v-model="inputMessage" placeholder="edit me">
     <p>Message is: {{ inputMessage}}</p>
 
+
+
     <!-- 显示路由组件的位置 -->
     <router-view></router-view>
 
@@ -23,10 +25,11 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 
+
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
   },
   data() {
     return {
